@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lami-Rema</title>
+  <link rel="icon" type="image/x-icon" href="image.jpg">
+  <link rel="stylesheet" href="Rema.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+
+  <style>
+   
+  </style>
+</head>
+
+<body>
+
+  <nav>
+  <a href="Index.html" class="logo">
+    <img src="logo2.png" alt="My Website Logo">
+  </a>
+
+   <div class="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+  <ul>
+    <li><a href="illustration.html">Illustration</a></li>
+    <li><a href="Projects.html">My Projects</a></li>
+  </ul>
+</nav>
+
+  <div class="video-gallery">
+    <div class="main-video">
+      <video src="rema3.MOV" controls poster="final-thumbnail.jpg"></video>
+    </div>
+    <div class="process-videos">
+      <div class="process-video" data-video="rema2.MOV">
+        <video src="rema2.MOV"></video>
+        <div class="overlay">▶</div>
+      </div>
+
+      <div class="process-video" data-video="kiss AE.mp4">
+        <video src="kiss AE.mp4"></video>
+        <div class="overlay">▶</div>
+      </div>
+
+      <div class="process-video" data-video="Booty Cam AE 22.mp4">
+        <video src="Booty Cam AE 22.mp4"></video>
+        <div class="overlay">▶</div>
+      </div>
+    </div>
+  </div>
+  <section class="description">
+    <h2>Rema Cam Motion Visualizer O2 Arena 2025</h2>
+    <p><strong>Client:</strong> Rema / Tropical</p>
+    <p><strong>Illustrator:</strong> Wallstreet (Abduldabar)</p>
+    <p><strong>Tool Used:</strong> Adobe After Effects</p>
+    <br>
+    <p>
+      For Rema’s 2025 O2 Arena concert, I was tasked with animating a 
+      <em>"Kiss Cam"-style</em> visualizer a fun, interactive moment designed to amplify 
+      crowd engagement during the live show. The goal was to blend Afro-futurism 
+      aesthetics with concert-ready energy playful, bold, and in sync with Rema's 
+      sound and on-stage vibe.
+    </p>
+    <p>
+      The concept needed to feel organic to the performance while standing out as a 
+      memorable moment for fans. Using After Effects, I animated a looping visual 
+      that mimicked the classic kiss cam frame but reimagined it with vibrant, 
+      Rema-style twists.
+    </p>
+  </section>
+  <div class="modal" id="videoModal">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <video id="modalVideo" controls autoplay></video>
+  </div>
+
+  <footer>
+    <a href="https://www.instagram.com/lamisonaike"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@lami_sonaike"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="mailto:Oluwalami40@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+    <a href="https://x.com/lamisonaike"><i class="fa-brands fa-x-twitter"></i></a>
+  </footer>
+
+  <script>
+    const modal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    const closeBtn = document.getElementById('closeModal');
+
+    document.querySelectorAll('.process-video').forEach(item => {
+      item.addEventListener('click', () => {
+        let videoSrc = item.getAttribute('data-video');
+        videoSrc = encodeURI(videoSrc);
+        modalVideo.src = videoSrc;
+        modalVideo.currentTime = 0;
+        modal.classList.add('active');
+        modalVideo.load();
+        modalVideo.play().catch(() => {
+          modalVideo.muted = true;
+          modalVideo.play();
+        });
+      });
+    });
+
+    function closeModal() {
+      modal.classList.remove('active');
+      modalVideo.pause();
+      modalVideo.src = "";
+    }
+
+    modal.addEventListener('click', e => {
+      if (e.target === modal) closeModal();
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+
+     
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+      menuToggle.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

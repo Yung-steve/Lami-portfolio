@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lami</title>
+  <link rel="icon" type="image/x-icon" href="image.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Typography.css">
+</head>
+<body>
+  <nav>
+    <a href="Index.html" class="logo">
+      <img src="logo2.png" alt="My Website Logo">
+    </a>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="illustration.html">Illustration</a></li>
+      <li><a href="Projects.html">My Projects</a></li>
+    </ul>
+  </nav>
+
+  <h1>Typography Projects</h1>
+
+  <div class="project">
+    <div class="gif-container">
+      <img src="naso_1.gif" alt="Typography Project 1">
+    </div>
+    <div class="project-content">
+      <h2>NASO</h2>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="gif-container">
+      <img src="pinpop_1.gif" alt="Typography Project 2">
+    </div>
+    <div class="project-content">
+      <h2>PINPOP</h2>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="gif-container">
+      <img src="proud.gif" alt="Typography Project 3">
+    </div>
+    <div class="project-content">
+      <h2>PROUD</h2>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="gif-container">
+      <img src="stepup.gif" alt="Typography Project 4">
+    </div>
+    <div class="project-content">
+      <h2>STEPUP</h2>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="gif-container">
+      <img src="dontstopcreating.gif" alt="Typography Project 5">
+    </div>
+    <div class="project-content">
+      <h2>DONT STOP CREATING</h2>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="gif-container">
+      <img src="Kinetic.gif" alt="Typography Project 6">
+    </div>
+    <div class="project-content">
+      <h2>KINETIC</h2>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="gif-container">
+      <img src="DB.gif" alt="Typography Project 7">
+    </div>
+    <div class="project-content">
+      <h2>D B</h2>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="gif-container">
+      <video autoplay loop muted playsinline>
+        <source src="BOLD.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="project-content">
+      <h2>BOLD</h2>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="gif-container">
+      <img src="orangecule.gif" alt="Typography Project 9">
+    </div>
+    <div class="project-content">
+      <h2>ORANGE CULE</h2>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="gif-container">
+      <video autoplay loop muted playsinline>
+        <source src="glass sonder.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="project-content">
+      <h2>GLASS SOUNDER</h2>
+    </div>
+  </div>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

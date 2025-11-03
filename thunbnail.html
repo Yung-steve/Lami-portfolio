@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LAMI</title>
+  <link rel="stylesheet" href="thumbnail.css" />
+  <link rel="icon" type="image/x-icon" href="image.jpg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+<body>
+  <nav>
+    <a href="Index.html" class="logo">
+      <img src="logo2.png" alt="My Website Logo" />
+    </a>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <ul>
+      <li><a href="illustration.html">Illustration</a></li>
+      <li><a href="Projects.html">My Projects</a></li>
+    </ul>
+  </nav>
+
+  <section class="image-showcase">
+    <div class="grid-item"><img src="drtam/frame (3).png" alt="Project 1" /></div>
+    <div class="grid-item"><img src="drtam/frame (1).png" alt="Project 2" /></div>
+    <div class="grid-item"><img src="drtam/frame (2).png" alt="Project 3" /></div>
+    <div class="grid-item"><img src="drtam/frame (4).png" alt="Project 4" /></div>
+    <div class="grid-item"><img src="drtam/frame (5).png" alt="Project 5" /></div>
+  </section>
+
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage" />
+  </div>
+
+  <section>
+    <div class="video-container">
+      <video controls>
+        <source src="DR TAM2_1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <section class="case-study">
+    <div class="case-header">
+      <h2>YouTube Intro – Dr. Tams Lifestyle Vlog</h2>
+      <p class="subtitle">A warm, stylish, and personal intro for a modern lifestyle creator</p>
+    </div>
+
+    <div class="case-body">
+      <div class="case-meta">
+        <div><span>Client</span> Dr. Tams</div>
+        <div><span>Tools</span> Adobe After Effects (Rigging & Animation)</div>
+        <div><span>Type</span> YouTube Intro Animation</div>
+      </div>
+
+      <div class="case-description">
+        <p>
+          Dr. Tams, a lifestyle content creator blending wellness, travel, and personal insight,
+          needed a YouTube intro that felt warm, stylish, and personal a perfect reflection
+          of her modern yet approachable brand identity.
+        </p>
+        <p>
+          The goal was to create an animation that flows seamlessly into her vlog,
+          capturing authenticity, professionalism, and charm in just a few seconds.
+          The design balances clean typography with soft motion cues to convey warmth and trust.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <a href="https://www.instagram.com/lamisonaike?igsh=a3R3NGUwZDQ5bWVq&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@lami_sonaike?_t=ZS-8zaKHvw5eFk&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="mailto:Oluwalami40@gmail.com?subject=Project%20Inquiry&body=Hi%20there,"><i class="fa-regular fa-envelope"></i></a>
+    <a href="https://x.com/lamisonaike?s=21"><i class="fa-brands fa-x-twitter"></i></a>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      menuToggle.classList.toggle('active');
+    });
+
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const closeBtn = document.querySelector('.close');
+
+    document.querySelectorAll('.grid-item img').forEach(img => {
+      img.addEventListener('click', () => {
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    modal.addEventListener('click', e => {
+      if (e.target === modal) modal.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

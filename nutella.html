@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lami-Music-visualizer</title>
+  <link rel="stylesheet" href="nuttella.css" />
+  <link rel="icon" type="image/x-icon" href="image.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+</head>
+<body>
+
+  <nav>
+    <a href="Index.html" class="logo">
+      <img src="logo2.png" alt="My Website Logo" />
+    </a>
+
+    <ul>
+      <li><a href="illustration.html">Illustration</a></li>
+      <li><a href="Projects.html">My Projects</a></li>
+    </ul>
+
+    <div class="menu-toggle" aria-label="Open menu" role="button" tabindex="0">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+
+  <section class="hero-video-section">
+    <video autoplay muted loop playsinline poster="assets/mv-poster.jpg">
+      <source src="assets/music-video-animation.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-overlay-content">
+      <h1>Nutella Short Ads</h1>
+      <p>
+        Full Animation & Direction.<br>
+        <span><strong>Client:</strong> Nutella</span><br>
+        <span><strong>Tool:</strong> Adobe After Effects, Cinema 4D</span><br>
+        We used a hybrid 2D/3D workflow, combining the expressive charm of 2D animation with the depth and realism of 3D.<br>
+        After Effects was used for compositing and 2D elements, while Cinema 4D brought the Nutella jar and environment to life with dynamic camera movements and product animation.
+      </p>
+      <a href="#video-gallery-item" class="secondary-link">Watch</a>
+    </div>
+  </section>
+
+  <section class="video-gallery-section">
+    <h2 class="section-title">..........</h2>
+  </section>
+
+  <div class="main-video-container">
+    <video controls>
+      <source src="1080.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="modal" id="imageModal">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <img id="modalImage" src="" alt="Full Image" />
+  </div>
+
+  <footer>
+    <a href="https://www.instagram.com/lamisonaike"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@lami_sonaike"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="mailto:Oluwalami40@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+    <a href="https://x.com/lamisonaike"><i class="fa-brands fa-x-twitter"></i></a>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+      menuToggle.classList.toggle('active');
+    });
+
+    menuToggle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        navMenu.classList.toggle('show');
+        menuToggle.classList.toggle('active');
+      }
+    });
+
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeBtn = document.getElementById("closeModal");
+
+    document.querySelectorAll(".grid-item img").forEach(img => {
+      img.addEventListener("click", () => {
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>

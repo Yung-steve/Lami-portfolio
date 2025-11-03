@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAMI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Style.css">
+  <link rel="icon" type="image/x-icon" href="image.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+
+  <nav>
+    <a href="Index.html" class="logo">
+      <img src="logo2.png" alt="My Website Logo">
+    </a>
+
+   
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul>
+      <li><a href="illustration.html">Illustration</a></li>
+      <li><a href="Projects.html">My Projects</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <video autoplay loop muted plays-inline class="back-video">
+      <source src="portfolio-video.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+  </div>
+
+  <section id="lami">
+    <h1>LAMI</h1> 
+    <p>
+      is a Nigerian animator and motion designer specializing in brand and product animation.
+      From sleek 2D to immersive 3D and dynamic hybrids,
+      he blends storytelling with design to create purposeful,
+      visually striking motion that connects with audiences.
+    </p>
+  </section>
+
+  <script>
+    // Hamburger toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('nav ul');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      hamburger.classList.toggle('active');
+    });
+
+    // Scroll animation (optional)
+    window.addEventListener("scroll", () => {
+      const navbar = document.querySelector("nav");
+      const sectionTop = document.getElementById("lami").offsetTop;
+
+      if (window.scrollY >= sectionTop - 50) { 
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lami Nouva Scarf</title>
+  <link rel="icon" type="image/x-icon" href="image.jpg">
+  <link rel="stylesheet" href="Medical.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lobster&family=Pinyon+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+    <a href="Index.html" class="logo">
+      <img src="logo2.png" alt="My Website Logo">
+    </a>
+
+    <div class="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <ul>
+      <li><a href="illustration.html">Illustration</a></li>
+      <li><a href="Projects.html">My Projects</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Sade</h1>
+    <p class="subtitle"></p>
+    <p class="category"></p>
+  </div>
+
+  <div class="hero-image">
+    <img src="Sade/HEART white.png" alt="Sade Illustration" style="background-color: black;">
+    <img src="Sade/HEART.png" alt="Sade Illustration">
+    <img src="Sade/love Heart white.png" alt="Sade Illustration" style="background-color: black;">
+    <img src="Sade/love Heart.png" alt="Sade Illustration">
+  </div>
+
+  <section class="gallery">
+    <h2>See Other Work</h2>
+    <div class="grid-container">
+      <a href="page1.html" class="grid-item">
+        <img src="Lifestyle/Life 2.png" alt="Art 1">
+        <div class="overlay">
+          <div class="text">
+            <h3>Lifestyle</h3>
+            <p>Click to explore</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="page2.html" class="grid-item">
+        <img src="personal/P6.jpg" alt="Art 2">
+        <div class="overlay">
+          <div class="text">
+            <h3>Personal</h3>
+            <p>Click to explore</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <a href="https://www.instagram.com/lamisonaike"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@lami_sonaike"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="mailto:Oluwalami40@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+    <a href="https://x.com/lamisonaike"><i class="fa-brands fa-x-twitter"></i></a>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+      menuToggle.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

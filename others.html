@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lami-Other-Project</title>
+    <link rel="stylesheet" href="others.css">
+     <link rel="icon" type="image/x-icon" href="image.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+  <a href="Index.html" class="logo">
+    <img src="logo2.png" alt="My Website Logo">
+  </a>
+  <ul>
+    <li><a href="illustration.html">Illustration</a></li>
+    <li><a href="Projects.html">My Projects</a></li>
+  </ul>
+</nav>
+    <section class="hero-video-section">
+        <video autoplay muted loop playsinline poster="assets/mv-poster.jpg">
+            <source src="assets/music-video-animation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div class="hero-overlay-content">
+            <h1>Other Projects</h1>
+            <p>
+              <span><strong>Tool:</strong> Varies (After Effects, Illustrator, Procreate Dream, etc.)</span>
+              <br>
+              Not every project fits neatly into a category  and that’s the beauty of this section. <br>From personal explorations to SaaS brand visuals, this is where I experiment, collaborate, and push boundaries outside the typical brief.
+<br> These projects are driven by curiosity, problem solving, and play. Whether it's a self-initiated motion study, UI animation for a startup, or an abstract loop inspired by a soundbite, the aim is always to make ideas move in unexpected ways
+            </p> 
+            <a href="#portfolio" class="secondary-link">Watch</a> 
+        </div>
+    </section>
+
+
+      <div class="video-gallery">
+    <div class="main-video">
+      <video src="Others/01 - Homepage header 1.mp4" controls poster="Others/thumb (1).png"></video>
+    </div>
+    <div class="main-video">
+      <video src="Others/Copy of 1 (1).mp4" controls poster="Others/thumb (2).png"></video>
+    </div>
+    <div class="main-video">
+      <video src="Others/micro..mp4" controls poster="Others/thumb (3).png"></video>
+    </div>
+    
+  </div>
+  
+   <footer>
+    <a href="https://www.instagram.com/lamisonaike"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@lami_sonaike"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="mailto:Oluwalami40@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+    <a href="https://x.com/lamisonaike"><i class="fa-brands fa-x-twitter"></i></a>
+  </footer>
+
+  <script>
+  const menuToggle = document.createElement('div');
+  menuToggle.classList.add('menu-toggle');
+  menuToggle.innerHTML = '<div></div><div></div><div></div>';
+  document.querySelector('nav').appendChild(menuToggle);
+
+  const navMenu = document.querySelector('nav ul');
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+</script>
+
+
+</body>
+</html>

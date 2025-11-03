@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lami Nouva Scarf</title>
+  <link rel="icon" type="image/x-icon" href="image.jpg">
+  <link rel="stylesheet" href="nouva.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+</head>
+<body>
+
+  <nav>
+    <a href="Index.html" class="logo">
+      <img src="logo2.png" alt="My Website Logo">
+    </a>
+
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul>
+      <li><a href="illustration.html">Illustration</a></li>
+      <li><a href="Projects.html">My Projects</a></li>
+    </ul>
+  </nav>
+
+  <section class="video-section">
+    <div class="main-video">
+      <video src="final.mp4" controls poster="Thumb.png"></video>
+    </div>
+
+    <div class="process-videos">
+      <div class="process-video" data-video="prw.mp4">
+        <video src="prw.mp4" controls poster="Thumb1.png"></video>
+        <div class="overlay">▶</div>
+      </div>
+      <div class="process-video" data-video="sap.mp4">
+        <video src="sap.mp4"></video>
+        <div class="overlay">▶</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="description">
+    <h1>Nouva Scarf</h1>
+    <div class="details">
+      <span><strong>Tool:</strong> Cinema4D, Adobe After Effects</span>
+      <span><strong>Client:</strong> Nouva</span>
+    </div>
+    <h3>Creative Approach</h3>
+    <p>
+      For Nouva, a fashion brand known for its minimalist yet elegant aesthetics, I was tasked with creating 
+      a product-focused motion visual that highlighted the flow, texture, and elegance of their signature scarves.
+    </p>
+    <p>
+      The goal was to bring the lightweight, graceful quality of the Nouva Scarf to life through motion blending realism 
+      with artistic direction. Rather than showing the product in a conventional way, the idea was to make it dance on screen, 
+      reflecting movement, airiness, and luxury.
+    </p>
+  </section>
+
+  <div class="modal" id="videoModal">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <video id="modalVideo" controls autoplay></video>
+  </div>
+
+  <footer>
+    <a href="https://www.instagram.com/lamisonaike"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@lami_sonaike"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="mailto:Oluwalami40@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+    <a href="https://x.com/lamisonaike"><i class="fa-brands fa-x-twitter"></i></a>
+  </footer>
+
+  <script>
+    // Hamburger Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+      menuToggle.classList.toggle('active');
+    });
+
+    // Modal Video Functionality
+    const modal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    const closeBtn = document.getElementById('closeModal');
+
+    document.querySelectorAll('.process-video').forEach(item => {
+      item.addEventListener('click', () => {
+        let videoSrc = item.getAttribute('data-video');
+        videoSrc = encodeURI(videoSrc);
+        modalVideo.src = videoSrc;
+        modalVideo.currentTime = 0;
+        modal.classList.add('active');
+        modalVideo.load();
+        modalVideo.play().catch(() => {
+          modalVideo.muted = true;
+          modalVideo.play();
+        });
+      });
+    });
+
+    function closeModal() {
+      modal.classList.remove('active');
+      modalVideo.pause();
+      modalVideo.src = "";
+    }
+
+    modal.addEventListener('click', e => {
+      if (e.target === modal) closeModal();
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+  </script>
+</body>
+</html>

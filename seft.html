@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typography Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #000;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin: 40px 0;
+      font-weight: 600;
+    }
+
+    .project {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      height: 100vh; /* full screen per project */
+      padding: 60px;
+      scroll-snap-align: start;
+      background: #f9f9f9;
+    }
+
+    .project:nth-child(even) {
+      background: #fff; /* alternate background */
+    }
+
+    .gif-container {
+      width: 55%;
+      height: 70vh; /* consistent height */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .gif-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* maintain look */
+    }
+
+    .project-content {
+      width: 40%;
+    }
+
+    .project-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 25px;
+    }
+
+    .project-content p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .tools {
+      margin-bottom: 25px;
+    }
+
+    .tools span {
+      display: inline-block;
+      background: #e9e9e9;
+      color: #333;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: #000;
+      color: #fff;
+      padding: 14px 28px;
+      font-size: 1rem;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #333;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .project {
+        flex-direction: column;
+        height: auto; /* allow scroll */
+        padding: 40px;
+      }
+
+      .gif-container,
+      .project-content {
+        width: 100%;
+      }
+
+      .gif-container {
+        height: 50vh;
+      }
+
+      .project-content {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Typography Projects</h1>
+
+  <!-- Project 1 -->
+  <div class="project">
+    <div class="gif-container">
+      <img src="gif1.gif" alt="Typography Project 1">
+    </div>
+    <div class="project-content">
+      <h2>Typography Project 1</h2>
+      <p>Describe how you created this project here — your concept, tools, and challenges.</p>
+      <div class="tools">
+        <span>Photoshop</span>
+        <span>After Effects</span>
+      </div>
+      <a href="#" class="btn">View Full Project</a>
+    </div>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="project">
+    <div class="gif-container">
+      <img src="gif2.gif" alt="Typography Project 2">
+    </div>
+    <div class="project-content">
+      <h2>Typography Project 2</h2>
+      <p>Describe how you created this project here.</p>
+      <div class="tools">
+        <span>Figma</span>
+        <span>Illustrator</span>
+      </div>
+      <a href="#" class="btn">View Full Project</a>
+    </div>
+  </div>
+
+
+  <div class="project">
+    <div class="gif-container">
+      <img src="gif2.gif" alt="Typography Project 2">
+    </div>
+    <div class="project-content">
+      <h2>Typography Project 2</h2>
+      <p>Describe how you created this project here.</p>
+      <div class="tools">
+        <span>Figma</span>
+        <span>Illustrator</span>
+      </div>
+      <a href="#" class="btn">View Full Project</a>
+    </div>
+  </div>
+
+
+  <div class="project">
+    <div class="gif-container">
+      <img src="gif2.gif" alt="Typography Project 2">
+    </div>
+    <div class="project-content">
+      <h2>Typography Project 2</h2>
+      <p>Describe how you created this project here.</p>
+      <div class="tools">
+        <span>Figma</span>
+        <span>Illustrator</span>
+      </div>
+      <a href="#" class="btn">View Full Project</a>
+    </div>
+  </div>
+
+
+  <div class="project">
+    <div class="gif-container">
+      <img src="gif2.gif" alt="Typography Project 2">
+    </div>
+    <div class="project-content">
+      <h2>Typography Project 2</h2>
+      <p>Describe how you created this project here.</p>
+      <div class="tools">
+        <span>Figma</span>
+        <span>Illustrator</span>
+      </div>
+      <a href="#" class="btn">View Full Project</a>
+    </div>
+  </div>
+
+
+  <div class="project">
+    <div class="gif-container">
+      <img src="gif2.gif" alt="Typography Project 2">
+    </div>
+    <div class="project-content">
+      <h2>Typography Project 2</h2>
+      <p>Describe how you created this project here.</p>
+      <div class="tools">
+        <span>Figma</span>
+        <span>Illustrator</span>
+      </div>
+      <a href="#" class="btn">View Full Project</a>
+    </div>
+  </div>
+
+
+  <div class="project">
+    <div class="gif-container">
+      <img src="gif2.gif" alt="Typography Project 2">
+    </div>
+    <div class="project-content">
+      <h2>Typography Project 2</h2>
+      <p>Describe how you created this project here.</p>
+      <div class="tools">
+        <span>Figma</span>
+        <span>Illustrator</span>
+      </div>
+      <a href="#" class="btn">View Full Project</a>
+    </div>
+  </div>
+
+
+  <div class="project">
+    <div class="gif-container">
+      <img src="gif2.gif" alt="Typography Project 2">
+    </div>
+    <div class="project-content">
+      <h2>Typography Project 2</h2>
+      <p>Describe how you created this project here.</p>
+      <div class="tools">
+        <span>Figma</span>
+        <span>Illustrator</span>
+      </div>
+      <a href="#" class="btn">View Full Project</a>
+    </div>
+  </div>
+
+
+
+  <div class="project">
+    <div class="gif-container">
+      <img src="gif2.gif" alt="Typography Project 2">
+    </div>
+    <div class="project-content">
+      <h2>Typography Project 2</h2>
+      <p>Describe how you created this project here.</p>
+      <div class="tools">
+        <span>Figma</span>
+        <span>Illustrator</span>
+      </div>
+      <a href="#" class="btn">View Full Project</a>
+    </div>
+  </div>
+
+
+
+  <div class="project">
+    <div class="gif-container">
+      <img src="gif2.gif" alt="Typography Project 2">
+    </div>
+    <div class="project-content">
+      <h2>Typography Project 2</h2>
+      <p>Describe how you created this project here.</p>
+      <div class="tools">
+        <span>Figma</span>
+        <span>Illustrator</span>
+      </div>
+      <a href="#" class="btn">View Full Project</a>
+    </div>
+  </div>
+
+
+  <div class="project">
+    <div class="gif-container">
+      <img src="gif2.gif" alt="Typography Project 2">
+    </div>
+    <div class="project-content">
+      <h2>Typography Project 2</h2>
+      <p>Describe how you created this project here.</p>
+      <div class="tools">
+        <span>Figma</span>
+        <span>Illustrator</span>
+      </div>
+      <a href="#" class="btn">View Full Project</a>
+    </div>
+  </div>
+
+
+  <div class="project">
+    <div class="gif-container">
+      <img src="gif2.gif" alt="Typography Project 2">
+    </div>
+    <div class="project-content">
+      <h2>Typography Project 2</h2>
+      <p>Describe how you created this project here.</p>
+      <div class="tools">
+        <span>Figma</span>
+        <span>Illustrator</span>
+      </div>
+      <a href="#" class="btn">View Full Project</a>
+    </div>
+  </div>
+
+ 
+
+</body>
+</html>

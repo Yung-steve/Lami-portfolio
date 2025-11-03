@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LAMI-verve project</title>
+  <link rel="stylesheet" href="verve.css" />
+  <link rel="icon" type="image/x-icon" href="image.jpg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+</head>
+<body>
+
+  <nav>
+    <a href="Index.html" class="logo">
+      <img src="logo2.png" alt="My Website Logo" />
+    </a>
+
+    <ul>
+      <li><a href="illustration.html">Illustration</a></li>
+      <li><a href="Projects.html">My Projects</a></li>
+    </ul>
+
+    <div class="menu-toggle" aria-label="Open menu" role="button" tabindex="0">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+
+  <section class="image-showcase">
+    <div class="grid-item"><img src="verve/verve (1).png" alt="Project 1"></div>
+    <div class="grid-item"><img src="verve/verve (2).png" alt="Project 2"></div>
+    <div class="grid-item"><img src="verve/verve (3).png" alt="Project 3"></div>
+    <div class="grid-item"><img src="verve/verve (4).png" alt="Project 4"></div>
+    <div class="grid-item"><img src="verve/verve (5).png" alt="Project 5"></div>
+  </section>
+
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <section>
+    <div class="video-container">
+      <video controls>
+        <source src="VerVe Project.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <section class="case-study">
+    <div class="case-header">
+      <h2>Verve Promo Project</h2>
+    </div>
+
+    <div class="case-body">
+      <div class="case-meta">
+        <div><span>Client</span> Verve</div>
+        <div><span>Tools</span> Adobe After Effects, Blender</div>
+        <div><span>Expertise</span> Motion Design & 3D Asset Creation</div>
+      </div>
+
+      <div class="case-description">
+        <p>This project combined dynamic motion design with detailed 3D asset creation to deliver a visually compelling promo. We used Blender to model and animate 3D assets, providing depth and realism to the visuals.</p>
+        <p>These assets were then integrated into a motion design workflow in Adobe After Effects, where compositing, animation, and effects were applied to bring the concept to life. The blend of 3D elements with motion graphics allowed us to create an engaging and polished promo that effectively represents the Verve brand.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <a href="https://www.instagram.com/lamisonaike"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@lami_sonaike"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="mailto:Oluwalami40@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+    <a href="https://x.com/lamisonaike"><i class="fa-brands fa-x-twitter"></i></a>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+      menuToggle.classList.toggle('active');
+    });
+
+    menuToggle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        navMenu.classList.toggle('show');
+        menuToggle.classList.toggle('active');
+      }
+    });
+
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeBtn = document.querySelector(".close");
+
+    document.querySelectorAll(".grid-item img").forEach(img => {
+      img.addEventListener("click", () => {
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>

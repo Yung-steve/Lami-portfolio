@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ================= NAVBAR (Verve style) ================= */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  border-radius: 10px;
+}
+
+nav .logo img {
+  height: 60px;
+  width: auto;
+  cursor: pointer;
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.5));
+  transition: transform 0.3s ease;
+}
+
+nav .logo img:hover {
+  transform: scale(1.05);
+}
+
+nav ul.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  list-style: none;
+}
+
+nav ul.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  opacity: 0;
+  animation: linkSlide 0.6s forwards;
+}
+
+nav ul.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: black;
+  transition: width 0.3s ease;
+}
+
+nav ul.nav-links li a:hover {
+  color: #555;
+  transform: translateY(-2px);
+}
+
+nav ul.nav-links li a:hover::after {
+  width: 100%;
+}
+
+@keyframes linkSlide {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+nav ul.nav-links li:nth-child(1) a { animation-delay: 0.3s; }
+nav ul.nav-links li:nth-child(2) a { animation-delay: 0.6s; }
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ================= GRID WRAPPER ================= */
+.grid-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 140px;
+  gap: 70px;
+  padding-bottom: 100px;
+}
+
+.grid-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 90%;
+  flex-wrap: wrap;
+}
+
+/* Row 1 (1 project) */
+.grid-row.one .preview-box {
+  max-width: 950px;
+  width: 100%;
+}
+
+/* Rows 2-4 (3 projects each) */
+.grid-row.two .preview-box,
+.grid-row.three .preview-box,
+.grid-row.four .preview-box {
+  flex: 1 1 calc(33.333% - 40px);
+  max-width: 520px;
+}
+
+/* Preview boxes */
+.preview-box {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #000;
+}
+
+.preview-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+}
+
+.preview-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(90%);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px;
+  color: white;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+}
+
+.overlay h3 {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+}
+
+.overlay p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* ================= RESPONISVE ================= */
+@media (max-width: 1024px) {
+  .grid-row {
+    gap: 25px;
+  }
+  .grid-row.one .preview-box {
+    max-width: 95%;
+  }
+  .grid-row.two .preview-box,
+  .grid-row.three .preview-box,
+  .grid-row.four .preview-box {
+    flex: 1 1 calc(45% - 25px);
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle { display: flex; }
+  nav ul.nav-links {
+    position: absolute;
+    top: 70px;
+    right: 6%;
+    flex-direction: column;
+    background: rgba(255,255,255,0.95);
+    border-radius: 10px;
+    padding: 15px 25px;
+    gap: 18px;
+    display: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+  nav ul.nav-links.active { display: flex; }
+  
+  .grid-row {
+    flex-direction: column;
+  }
+  .preview-box {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  nav .logo img { height: 45px; }
+}

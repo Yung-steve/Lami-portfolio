@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flavour Lab — Brand Animation</title>
+  <link rel="icon" type="image/x-icon" href="image.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+  <link rel="stylesheet" href="flavour.css">
+</head>
+
+<body>
+
+  <nav>
+  <a href="Index.html" class="logo">
+    <img src="logo2.png" alt="My Website Logo">
+  </a>
+  <ul>
+    <li><a href="illustration.html">Illustration</a></li>
+    <li><a href="Projects.html">My Projects</a></li>
+  </ul>
+</nav>
+  <div class="video-gallery">
+    <div class="main-video">
+      <video src="flavour.mp4" controls poster="flavour-thumb.png"></video>
+    </div>
+
+    <div class="process-videos">
+      <div class="process-video" data-video="flavour-lab.mp4">
+        <video src="flavour-lab.mp4"></video>
+        <div class="overlay">▶</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="description">
+    <h2>Flavour Lab Brand Animation / Short Rollout</h2>
+    <p><strong>Tool:</strong> Procreate Dream, After Effects</p>
+    <p><strong>Type:</strong> Brand Animation / Short Rollout</p>
+    <p><strong>Illustration:</strong> 7ife (Tife)</p>
+    <p><strong>Creative Direction:</strong> Niyi Okeowo</p>
+    <br>
+    <p>
+      Flavour Lab is a bold, modern restaurant concept that blends experimental cuisine with vibrant visual culture. 
+      I was brought on to create a short animated rollout to support their brand launch something eye-catching, 
+      stylish, and full of flavor.
+    </p>
+    <p>
+      The goal was to introduce Flavour Lab with a visual identity that feels as fresh and creative as their food. 
+      The rollout animation needed to express their experimental vibe a mix of culinary science, street flavor, and urban design.
+    </p>
+  </section>
+
+  <div class="modal" id="videoModal">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <video id="modalVideo" controls autoplay></video>
+  </div>
+
+  <footer>
+    <a href="https://www.instagram.com/lamisonaike"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@lami_sonaike"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="mailto:Oluwalami40@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+    <a href="https://x.com/lamisonaike"><i class="fa-brands fa-x-twitter"></i></a>
+  </footer>
+
+ <script>
+
+   const modal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    const closeBtn = document.getElementById('closeModal');
+
+    document.querySelectorAll('.process-video').forEach(item => {
+      item.addEventListener('click', () => {
+        let videoSrc = item.getAttribute('data-video');
+        videoSrc = encodeURI(videoSrc);
+        modalVideo.src = videoSrc;
+        modalVideo.currentTime = 0;
+        modal.classList.add('active');
+        modalVideo.load();
+        modalVideo.play().catch(() => {
+          modalVideo.muted = true;
+          modalVideo.play();
+        });
+      });
+    });
+
+    function closeModal() {
+      modal.classList.remove('active');
+      modalVideo.pause();
+      modalVideo.src = "";
+    }
+
+    modal.addEventListener('click', e => {
+      if (e.target === modal) closeModal();
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+const menuToggle = document.createElement('div');
+menuToggle.classList.add('menu-toggle');
+menuToggle.innerHTML = '<div></div><div></div><div></div>';
+document.querySelector('nav').appendChild(menuToggle);
+
+const navMenu = document.querySelector('nav ul');
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('show');
+});
+</script>
+
+</body>
+</html>

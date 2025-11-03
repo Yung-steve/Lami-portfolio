@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lami-Music-Visualizer</title>
+  <link rel="stylesheet" href="music.css" />
+  <link rel="icon" type="image/x-icon" href="image.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+    <a href="Index.html" class="logo">
+      <img src="logo2.png" alt="My Website Logo" />
+    </a>
+
+    <div class="menu-toggle" id="menuToggle">
+      <div></div><div></div><div></div>
+    </div>
+
+    <ul id="navLinks">
+      <li><a href="illustration.html">Illustration</a></li>
+      <li><a href="Projects.html">My Projects</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero-video-section">
+    <video autoplay muted loop playsinline poster="assets/mv-poster.jpg">
+      <source src="assets/music-video-animation.mp4" type="video/mp4" />
+    </video>
+
+    <div class="hero-overlay-content">
+      <h1>Music Visualizer</h1>
+      <p>Full Animation & Direction.</p>
+      <a href="#video-gallery-item" class="secondary-link">Watch</a>
+    </div>
+  </section>
+
+  <section class="video-gallery-section">
+    <h2 class="section-title">..........</h2>
+
+    <div class="video-gallery-grid">
+      <div class="video-gallery-item">
+        <video controls poster="music/musi1.png" src="music/music (1).mp4" class="gallery-video"></video>
+        <div class="item-details"><p class="category">Tory Lane</p></div>
+      </div>
+
+      <div class="video-gallery-item">
+        <video controls poster="music/musi (2).png" src="music/music (2).mp4" class="gallery-video"></video>
+        <div class="item-details"><p class="category">Asake Process</p></div>
+      </div>
+
+      <div class="video-gallery-item">
+        <video controls poster="music/musi (3).png" src="music/music (3).mp4" class="gallery-video"></video>
+        <div class="item-details"><p class="category">Rendered</p></div>
+      </div>
+
+      <div class="video-gallery-item">
+        <video controls poster="music/musi (1).png" src="music/music (4).mp4" class="gallery-video"></video>
+        <div class="item-details"><p class="category">Sound</p></div>
+      </div>
+
+      <div class="video-gallery-item youtube-item">
+        <div class="video-responsive">
+          <iframe src="https://www.youtube.com/embed/lGs-U8_CkGw" allowfullscreen></iframe>
+        </div>
+        <div class="item-details"><h3>KOKOSE</h3><p class="category">Music Video</p></div>
+      </div>
+
+      <div class="video-gallery-item youtube-item">
+        <div class="video-responsive">
+          <iframe src="https://www.youtube.com/embed/zSJO8mcSgHg" allowfullscreen></iframe>
+        </div>
+        <div class="item-details"><h3>COMPANY</h3><p class="category">Music Video</p></div>
+      </div>
+
+      <div class="video-gallery-item youtube-item">
+        <div class="video-responsive">
+          <iframe src="https://www.youtube.com/embed/w1HaeqTGFQ0" allowfullscreen></iframe>
+        </div>
+        <div class="item-details"><h3>WHAT YOU WANT</h3><p class="category">Music Video</p></div>
+      </div>
+
+      <div class="video-gallery-item youtube-item">
+        <div class="video-responsive">
+          <iframe src="https://www.youtube.com/embed/9UKkkA4gcgs" allowfullscreen></iframe>
+        </div>
+        <div class="item-details"><h3>NEVER LET GO</h3><p class="category">Music Video</p></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const toggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    toggle.addEventListener("click", () => {
+      toggle.classList.toggle("active");
+      navLinks.classList.toggle("show");
+    });
+  </script>
+</body>
+</html>
